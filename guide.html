@@ -19,16 +19,59 @@
   
   <style>
     #map {
-      height: 400px; /* Fixed height instead of 100vh */
+      height: 100vh;
       width: 100%;
       z-index: 0;
     }
+    
+    /* Map Container Transitions */
+    #mapContainer {
+      transition: margin-left 0.3s ease-in-out;
+      margin-left: 0;
+    }
+    
+    #mapContainer.pushed {
+      margin-left: 320px; /* Width of sidebar */
+    }
+    
+    /* Sidebar Styles - slides from LEFT */
     .slide-panel {
-      transform: translateX(100%);
+      transform: translateX(-100%);
       transition: transform 0.3s ease-in-out;
+      width: 320px;
     }
     .slide-panel.active {
       transform: translateX(0);
+    }
+    
+    /* Toggle Button */
+    .sidebar-toggle {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      z-index: 25;
+      transition: left 0.3s ease-in-out;
+    }
+    
+    .sidebar-toggle.shifted {
+      left: 340px; /* Sidebar width + 20px */
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      #mapContainer.pushed {
+        margin-left: 0; /* No push on mobile */
+      }
+      
+      .sidebar-toggle.shifted {
+        left: 20px; /* Keep button on left on mobile */
+      }
+      
+      .slide-panel {
+        width: 100%;
+        max-width: 320px;
+      }
     }
     
     .status-indicator {
@@ -64,99 +107,15 @@
 </head>
 <body class="bg-gray-100">
 
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebarToggle" class="hidden">
+    <svg id="toggleIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 
-  <!-- Main Content Container -->
-  <div class="container mx-auto p-4 max-w-6xl overflow-hidden">
-    
-    <!-- Introduction Section -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">Find Your Perfect Local Guide</h2>
-      <p class="text-gray-600 mb-4">
-        Discover amazing local experiences with verified tour guides. Click on your location marker on the map below to see available guides in your area.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="text-center p-4 bg-blue-50 rounded-lg">
-          <div class="text-3xl mb-2">🗺️</div>
-          <h3 class="font-semibold text-gray-800">Click Your Location</h3>
-          <p class="text-sm text-gray-600">Find your position on the map</p>
-        </div>
-        <div class="text-center p-4 bg-green-50 rounded-lg">
-          <div class="text-3xl mb-2">👥</div>
-          <h3 class="font-semibold text-gray-800">Browse Guides</h3>
-          <p class="text-sm text-gray-600">See available local experts</p>
-        </div>
-        <div class="text-center p-4 bg-purple-50 rounded-lg">
-          <div class="text-3xl mb-2">📅</div>
-          <h3 class="font-semibold text-gray-800">Book & Explore</h3>
-          <p class="text-sm text-gray-600">Schedule your adventure</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Map Container -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
-      <div class="p-4 bg-gray-50 border-b">
-        <h3 class="text-lg font-semibold text-gray-800">Interactive Map</h3>
-        <p class="text-sm text-gray-600">Click the blue marker to find guides near you</p>
-      </div>
-      <div id="map"></div>
-    </div>
-
-    <!-- Features Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-4xl mb-3">⭐</div>
-        <h3 class="font-semibold text-gray-800 mb-2">Verified Guides</h3>
-        <p class="text-sm text-gray-600">All guides are background-checked and verified</p>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-4xl mb-3">💬</div>
-        <h3 class="font-semibold text-gray-800 mb-2">Direct Messaging</h3>
-        <p class="text-sm text-gray-600">Chat with guides before booking</p>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-4xl mb-3">🌟</div>
-        <h3 class="font-semibold text-gray-800 mb-2">Top Rated</h3>
-        <p class="text-sm text-gray-600">Highly rated by previous tourists</p>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center">
-        <div class="text-4xl mb-3">🔒</div>
-        <h3 class="font-semibold text-gray-800 mb-2">Secure Booking</h3>
-        <p class="text-sm text-gray-600">Safe and secure payment process</p>
-      </div>
-    </div>
-
-    <!-- How it Works Section -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">How It Works</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-blue-600">1</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 mb-2">Find Your Location</h3>
-          <p class="text-sm text-gray-600">Allow location access or manually find your position on the map and click the marker.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-blue-600">2</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 mb-2">Choose Your Guide</h3>
-          <p class="text-sm text-gray-600">Browse available guides, read reviews, and check their specialties and availability.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-blue-600">3</span>
-          </div>
-          <h3 class="font-semibold text-gray-800 mb-2">Book & Explore</h3>
-          <p class="text-sm text-gray-600">Message your guide, schedule your tour, and start exploring like a local!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Guide Sidebar (slides from right) -->
-  <div id="guideSidebar" class="slide-panel fixed top-0 right-0 w-80 h-full bg-white shadow-xl z-20 overflow-y-auto">
+  <!-- Guide Sidebar (slides from left) -->
+  <div id="guideSidebar" class="slide-panel fixed top-0 left-0 h-full bg-white shadow-xl z-20 overflow-y-auto">
     <div class="p-4 border-b bg-blue-50">
       <div class="flex justify-between items-center">
         <h2 class="text-xl font-bold text-gray-800">Available Guides</h2>
@@ -174,6 +133,16 @@
     <div id="guideList" class="p-4 space-y-3">
       <!-- Guide cards will be populated here -->
     </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <div class="w-full overflow-hidden">
+    
+    <!-- Map Container -->
+    <div id="mapContainer" class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+      <div id="map"></div>
+    </div>
+
   </div>
 
   <!-- Rest of your modals remain the same -->
@@ -411,10 +380,14 @@
     let currentFilter = 'all';
     let currentGuideId = null;
     let messageHistory = {};
+    let sidebarOpen = false;
     
     // DOM elements
     const guideSidebar = document.getElementById('guideSidebar');
     const closeSidebar = document.getElementById('closeSidebar');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const mapContainer = document.getElementById('mapContainer');
+    const toggleIcon = document.getElementById('toggleIcon');
     const guideList = document.getElementById('guideList');
     const bookingModal = document.getElementById('bookingModal');
     const closeBookingModal = document.getElementById('closeBookingModal');
@@ -435,6 +408,49 @@
     guidesData.forEach(guide => {
       messageHistory[guide.id] = [];
     });
+
+    // Toggle Sidebar Function
+    function toggleSidebar() {
+      const isMobile = window.innerWidth <= 768;
+      
+      if (sidebarOpen) {
+        // Close sidebar
+        guideSidebar.classList.remove('active');
+        if (!isMobile) {
+          mapContainer.classList.remove('pushed');
+          sidebarToggle.classList.remove('shifted');
+        }
+        
+        // Change icon to hamburger
+        toggleIcon.innerHTML = `<path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+        
+        sidebarOpen = false;
+        
+        // Invalidate map size after transition
+        setTimeout(() => {
+          map.invalidateSize();
+        }, 300);
+        
+      } else {
+        // Open sidebar
+        createGuideCards();
+        guideSidebar.classList.add('active');
+        if (!isMobile) {
+          mapContainer.classList.add('pushed');
+          sidebarToggle.classList.add('shifted');
+        }
+        
+        // Change icon to close X
+        toggleIcon.innerHTML = `<path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+        
+        sidebarOpen = true;
+        
+        // Invalidate map size after transition
+        setTimeout(() => {
+          map.invalidateSize();
+        }, 300);
+      }
+    }
 
     // Filter guides function
     function filterGuides(filter) {
@@ -539,15 +555,18 @@
       }).join('');
     }
 
-    // Show guide sidebar - THIS IS THE KEY FUNCTION THAT SLIDES FROM RIGHT
+    // Show guide sidebar function (for location marker click)
     function showGuideSidebar() {
-      createGuideCards();
-      guideSidebar.classList.add('active');
+      if (!sidebarOpen) {
+        toggleSidebar();
+      }
     }
 
-    // Hide guide sidebar
+    // Hide guide sidebar function
     function hideGuideSidebar() {
-      guideSidebar.classList.remove('active');
+      if (sidebarOpen) {
+        toggleSidebar();
+      }
     }
 
     // Book guide function
@@ -702,13 +721,14 @@
       reportModal.classList.remove('hidden');
     }
 
-    // Event listeners for modals
+    // Event listeners
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    closeSidebar.addEventListener('click', hideGuideSidebar);
     closeBookingModal.addEventListener('click', () => bookingModal.classList.add('hidden'));
     cancelBooking.addEventListener('click', () => bookingModal.classList.add('hidden'));
     closeMessagingModal.addEventListener('click', () => messagingModal.classList.add('hidden'));
     closeReportModal.addEventListener('click', () => reportModal.classList.add('hidden'));
     cancelReport.addEventListener('click', () => reportModal.classList.add('hidden'));
-    closeSidebar.addEventListener('click', hideGuideSidebar);
 
     // Form event listeners
     document.getElementById('bookingDuration').addEventListener('change', updateCostEstimate);
@@ -738,7 +758,7 @@
 ⏰ Time: ${time}
 ⏱️ Duration: ${duration} hours
 📍 Meeting Point: ${meetingPoint}
-💰 Estimated Cost: ${total}
+💰 Estimated Cost: $${total}
 📞 Your Contact: ${contact}
 
 Your booking request has been sent to ${guide.name}. 
@@ -790,6 +810,13 @@ Reference ID: RPT-${Date.now().toString().slice(-6)}`);
       });
     });
 
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 100);
+    });
+
     // Request location and setup map
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
@@ -816,7 +843,7 @@ Reference ID: RPT-${Date.now().toString().slice(-6)}`);
 
           userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(map);
 
-          // KEY INTERACTION: Click event to show guides sidebar from the right
+          // Click event to show guides sidebar
           userMarker.on('click', () => {
             showGuideSidebar();
           });
@@ -849,7 +876,7 @@ Reference ID: RPT-${Date.now().toString().slice(-6)}`);
 
           userMarker = L.marker([28.6139, 77.2090], { icon: defaultIcon }).addTo(map);
           
-          // KEY INTERACTION: Click event to show guides sidebar from the right
+          // Click event to show guides sidebar
           userMarker.on('click', () => {
             showGuideSidebar();
           });
@@ -873,7 +900,7 @@ Reference ID: RPT-${Date.now().toString().slice(-6)}`);
 
       userMarker = L.marker([28.6139, 77.2090], { icon: fallbackIcon }).addTo(map);
       
-      // KEY INTERACTION: Click event to show guides sidebar from the right
+      // Click event to show guides sidebar
       userMarker.on('click', () => {
         showGuideSidebar();
       });
@@ -892,6 +919,7 @@ Reference ID: RPT-${Date.now().toString().slice(-6)}`);
     window.sendMessage = sendMessage;
     window.sendQuickMessage = sendQuickMessage;
     window.filterGuides = filterGuides;
+    window.toggleSidebar = toggleSidebar;
   </script>
 </body>
 </html>
