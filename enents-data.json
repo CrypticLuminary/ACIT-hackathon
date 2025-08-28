@@ -1,0 +1,573 @@
+{
+  "currentUser": "CrypticLuminary",
+  "currentDateTime": "2025-08-28 16:16:34",
+  "events": [
+    {
+      "id": 1,
+      "name": "Dashain Festival Celebration",
+      "category": "cultural",
+      "date": "2025-09-15",
+      "endDate": "2025-09-25",
+      "location": "Kathmandu Durbar Square",
+      "coordinates": [27.7045, 85.3075],
+      "description": "Nepal's biggest festival celebrating the victory of good over evil. Experience traditional dances, cultural performances, and local cuisine.",
+      "capacity": 500,
+      "available": 342,
+      "price": "Free",
+      "rating": 4.8,
+      "reviews": 127,
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+        "https://images.unsplash.com/photo-1586822803041-6ad2f5a6be0f?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "crowd",
+          "level": "medium",
+          "message": "Large crowds expected. Keep belongings secure."
+        }
+      ],
+      "organizer": "Nepal Tourism Board",
+      "contact": "+977-1-4256909",
+      "userReviews": []
+    },
+    {
+      "id": 2,
+      "name": "Everest Marathon",
+      "category": "adventure",
+      "date": "2025-09-02",
+      "endDate": "2025-09-02",
+      "location": "Namche Bazaar to Lukla",
+      "coordinates": [27.8047, 86.7126],
+      "description": "World's highest marathon starting from Everest Base Camp. Challenge yourself in the breathtaking Himalayas.",
+      "capacity": 200,
+      "available": 45,
+      "price": "$450",
+      "rating": 4.9,
+      "reviews": 89,
+      "images": [
+        "https://images.unsplash.com/photo-1464822759844-d150ad6d1a98?w=800",
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "altitude",
+          "level": "high",
+          "message": "High altitude event. Proper acclimatization required."
+        }
+      ],
+      "organizer": "Everest Marathon Committee",
+      "contact": "+977-1-4411234",
+      "userReviews": []
+    },
+    {
+      "id": 3,
+      "name": "Holi Color Festival",
+      "category": "religious",
+      "date": "2025-10-15",
+      "endDate": "2025-10-15",
+      "location": "Basantapur Durbar Square",
+      "coordinates": [27.7043, 85.3073],
+      "description": "Festival of colors! Join locals in this joyous celebration with organic colors, music, and traditional sweets.",
+      "capacity": 800,
+      "available": 623,
+      "price": "NPR 200",
+      "rating": 4.7,
+      "reviews": 203,
+      "images": [
+        "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "safety",
+          "level": "low",
+          "message": "Wear old clothes. Colors may stain."
+        }
+      ],
+      "organizer": "Local Community",
+      "contact": "+977-1-4445566",
+      "userReviews": []
+    },
+    {
+      "id": 4,
+      "name": "Traditional Newari Cooking Class",
+      "category": "cultural",
+      "date": "2025-09-01",
+      "endDate": "2025-09-01",
+      "location": "Bhaktapur",
+      "coordinates": [27.6710, 85.4298],
+      "description": "Learn authentic Newari cuisine from local grandmothers. Includes market tour and full meal preparation.",
+      "capacity": 25,
+      "available": 12,
+      "price": "$35",
+      "rating": 4.9,
+      "reviews": 67,
+      "images": [
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Bhaktapur Cultural Center",
+      "contact": "+977-1-4446677",
+      "userReviews": []
+    },
+    {
+      "id": 5,
+      "name": "Sunrise at Nagarkot",
+      "category": "nature",
+      "date": "2025-08-31",
+      "endDate": "2025-08-31",
+      "location": "Nagarkot View Tower",
+      "coordinates": [27.7172, 85.5206],
+      "description": "Witness breathtaking sunrise over the Himalayas including Mt. Everest. Transportation and breakfast included.",
+      "capacity": 50,
+      "available": 31,
+      "price": "$25",
+      "rating": 4.6,
+      "reviews": 94,
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "weather",
+          "level": "medium",
+          "message": "Early morning departure (4 AM). Dress warmly."
+        }
+      ],
+      "organizer": "Mountain View Tours",
+      "contact": "+977-1-4447788",
+      "userReviews": []
+    },
+    {
+      "id": 6,
+      "name": "Pottery Making Workshop",
+      "category": "cultural",
+      "date": "2025-09-03",
+      "endDate": "2025-09-03",
+      "location": "Pottery Square, Bhaktapur",
+      "coordinates": [27.6728, 85.4267],
+      "description": "Learn traditional pottery techniques from master craftsmen. Create your own souvenir to take home.",
+      "capacity": 15,
+      "available": 8,
+      "price": "$20",
+      "rating": 4.5,
+      "reviews": 42,
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "safety",
+          "level": "low",
+          "message": "Wear clothes you don't mind getting muddy."
+        }
+      ],
+      "organizer": "Bhaktapur Artisan Guild",
+      "contact": "+977-1-4448899",
+      "userReviews": []
+    },
+    {
+      "id": 7,
+      "name": "Kathmandu Street Food Tour",
+      "category": "food",
+      "date": "2025-08-30",
+      "endDate": "2025-08-30",
+      "location": "Thamel",
+      "coordinates": [27.7172, 85.3097],
+      "description": "Explore authentic Nepali street food with a local guide. Try momos, chatpate, and traditional sweets.",
+      "capacity": 20,
+      "available": 15,
+      "price": "$15",
+      "rating": 4.7,
+      "reviews": 156,
+      "images": [
+        "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "health",
+          "level": "low",
+          "message": "Inform guide of any food allergies beforehand."
+        }
+      ],
+      "organizer": "Kathmandu Food Tours",
+      "contact": "+977-1-4449900",
+      "userReviews": []
+    },
+    {
+      "id": 8,
+      "name": "Traditional Music Concert",
+      "category": "cultural",
+      "date": "2025-09-05",
+      "endDate": "2025-09-05",
+      "location": "Patan Museum",
+      "coordinates": [27.6734, 85.3244],
+      "description": "Evening concert featuring traditional Nepali instruments including tabla, sitar, and flute.",
+      "capacity": 100,
+      "available": 67,
+      "price": "NPR 500",
+      "rating": 4.8,
+      "reviews": 73,
+      "images": [
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Patan Cultural Society",
+      "contact": "+977-1-4441122",
+      "userReviews": []
+    },
+    {
+      "id": 9,
+      "name": "Annapurna Base Camp Trek",
+      "category": "adventure",
+      "date": "2025-09-10",
+      "endDate": "2025-09-22",
+      "location": "Annapurna Base Camp",
+      "coordinates": [28.5312, 83.8737],
+      "description": "12-day trek to Annapurna Base Camp with stunning mountain views and local culture immersion.",
+      "capacity": 30,
+      "available": 18,
+      "price": "$850",
+      "rating": 4.9,
+      "reviews": 234,
+      "images": [
+        "https://images.unsplash.com/photo-1464822759844-d150ad6d1a98?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "altitude",
+          "level": "high",
+          "message": "High altitude trekking. Physical fitness required."
+        }
+      ],
+      "organizer": "Himalayan Adventures",
+      "contact": "+977-1-5551234",
+      "userReviews": []
+    },
+    {
+      "id": 10,
+      "name": "Buddha Jayanti Celebration",
+      "category": "religious",
+      "date": "2025-09-08",
+      "endDate": "2025-09-08",
+      "location": "Lumbini",
+      "coordinates": [27.4780, 83.2762],
+      "description": "Celebrate the birth of Lord Buddha at his birthplace with prayers, meditation, and cultural programs.",
+      "capacity": 1000,
+      "available": 756,
+      "price": "Free",
+      "rating": 4.6,
+      "reviews": 445,
+      "images": [
+        "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Lumbini Development Trust",
+      "contact": "+977-71-580236",
+      "userReviews": []
+    },
+    {
+      "id": 11,
+      "name": "Nepali Thali Food Festival",
+      "category": "food",
+      "date": "2025-09-12",
+      "endDate": "2025-09-14",
+      "location": "Patan Durbar Square",
+      "coordinates": [27.6734, 85.3244],
+      "description": "3-day food festival featuring authentic Nepali thali from different regions of Nepal.",
+      "capacity": 300,
+      "available": 189,
+      "price": "NPR 750",
+      "rating": 4.5,
+      "reviews": 89,
+      "images": [
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Nepal Food Association",
+      "contact": "+977-1-5567890",
+      "userReviews": []
+    },
+    {
+      "id": 12,
+      "name": "Chitwan Wildlife Safari",
+      "category": "nature",
+      "date": "2025-09-06",
+      "endDate": "2025-09-08",
+      "location": "Chitwan National Park",
+      "coordinates": [27.5291, 84.3542],
+      "description": "3-day wildlife safari including elephant rides, bird watching, and jungle walks.",
+      "capacity": 40,
+      "available": 23,
+      "price": "$180",
+      "rating": 4.7,
+      "reviews": 167,
+      "images": [
+        "https://images.unsplash.com/photo-1549366021-9f761d040a94?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "wildlife",
+          "level": "medium",
+          "message": "Wild animals present. Follow guide instructions."
+        }
+      ],
+      "organizer": "Chitwan Adventure Tours",
+      "contact": "+977-56-580123",
+      "userReviews": []
+    },
+    {
+      "id": 13,
+      "name": "Paragliding Adventure",
+      "category": "adventure",
+      "date": "2025-08-29",
+      "endDate": "2025-08-29",
+      "location": "Sarangkot, Pokhara",
+      "coordinates": [28.2380, 83.9956],
+      "description": "Experience the thrill of paragliding over Pokhara valley with stunning Himalayan views.",
+      "capacity": 25,
+      "available": 12,
+      "price": "$95",
+      "rating": 4.8,
+      "reviews": 312,
+      "images": [
+        "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "weather",
+          "level": "medium",
+          "message": "Weather dependent activity. May be cancelled due to wind conditions."
+        }
+      ],
+      "organizer": "Pokhara Paragliding",
+      "contact": "+977-61-461234",
+      "userReviews": []
+    },
+    {
+      "id": 14,
+      "name": "Meditation Retreat",
+      "category": "spiritual",
+      "date": "2025-09-20",
+      "endDate": "2025-09-27",
+      "location": "Kopan Monastery",
+      "coordinates": [27.7454, 85.3647],
+      "description": "7-day silent meditation retreat with Buddhist monks including teachings and practice sessions.",
+      "capacity": 50,
+      "available": 31,
+      "price": "$120",
+      "rating": 4.9,
+      "reviews": 98,
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Kopan Monastery",
+      "contact": "+977-1-4812102",
+      "userReviews": []
+    },
+    {
+      "id": 15,
+      "name": "Jazz Festival Kathmandu",
+      "category": "music",
+      "date": "2025-10-01",
+      "endDate": "2025-10-03",
+      "location": "Army Officer's Club",
+      "coordinates": [27.7014, 85.3206],
+      "description": "3-day international jazz festival featuring local and international artists.",
+      "capacity": 800,
+      "available": 542,
+      "price": "NPR 1500",
+      "rating": 4.6,
+      "reviews": 234,
+      "images": [
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Jazz Society Nepal",
+      "contact": "+977-1-4423456",
+      "userReviews": []
+    },
+    {
+      "id": 16,
+      "name": "Himalayan Yoga Retreat",
+      "category": "spiritual",
+      "date": "2025-09-15",
+      "endDate": "2025-09-22",
+      "location": "Nagarkot",
+      "coordinates": [27.7172, 85.5206],
+      "description": "7-day yoga retreat in the Himalayas with sunrise sessions and meditation practices.",
+      "capacity": 30,
+      "available": 16,
+      "price": "$350",
+      "rating": 4.8,
+      "reviews": 156,
+      "images": [
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Himalayan Yoga Center",
+      "contact": "+977-1-6612345",
+      "userReviews": []
+    },
+    {
+      "id": 17,
+      "name": "Mountain Biking Challenge",
+      "category": "sports",
+      "date": "2025-09-18",
+      "endDate": "2025-09-18",
+      "location": "Shivapuri National Park",
+      "coordinates": [27.8015, 85.3803],
+      "description": "Challenging mountain bike race through forest trails with different difficulty levels.",
+      "capacity": 100,
+      "available": 67,
+      "price": "NPR 2000",
+      "rating": 4.5,
+      "reviews": 123,
+      "images": [
+        "https://images.unsplash.com/photo-1544191696-15693072a2b0?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "difficulty",
+          "level": "high",
+          "message": "Challenging terrain. Advanced biking skills required."
+        }
+      ],
+      "organizer": "Nepal Cycling Club",
+      "contact": "+977-1-4456789",
+      "userReviews": []
+    },
+    {
+      "id": 18,
+      "name": "Photography Workshop",
+      "category": "workshop",
+      "date": "2025-09-09",
+      "endDate": "2025-09-11",
+      "location": "Bhaktapur Durbar Square",
+      "coordinates": [27.6728, 85.4267],
+      "description": "3-day photography workshop covering heritage architecture and street photography.",
+      "capacity": 20,
+      "available": 11,
+      "price": "$85",
+      "rating": 4.7,
+      "reviews": 78,
+      "images": [
+        "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Nepal Photography Society",
+      "contact": "+977-1-5523456",
+      "userReviews": []
+    },
+    {
+      "id": 19,
+      "name": "White Water Rafting",
+      "category": "adventure",
+      "date": "2025-09-13",
+      "endDate": "2025-09-15",
+      "location": "Trishuli River",
+      "coordinates": [27.8869, 85.0978],
+      "description": "3-day white water rafting adventure with camping and local village visits.",
+      "capacity": 35,
+      "available": 19,
+      "price": "$145",
+      "rating": 4.6,
+      "reviews": 198,
+      "images": [
+        "https://images.unsplash.com/photo-1544737151413-6a4fdc9e31d9?w=800"
+      ],
+      "videos": [],
+      "warnings": [
+        {
+          "type": "water",
+          "level": "medium",
+          "message": "Water activity. Swimming ability recommended."
+        }
+      ],
+      "organizer": "River Adventure Nepal",
+      "contact": "+977-1-4667890",
+      "userReviews": []
+    },
+    {
+      "id": 20,
+      "name": "Newari Heritage Walk",
+      "category": "cultural",
+      "date": "2025-08-30",
+      "endDate": "2025-08-30",
+      "location": "Kirtipur",
+      "coordinates": [27.6785, 85.2751],
+      "description": "Half-day guided walk through ancient Newari town with traditional architecture and culture.",
+      "capacity": 25,
+      "available": 18,
+      "price": "NPR 800",
+      "rating": 4.4,
+      "reviews": 56,
+      "images": [
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800"
+      ],
+      "videos": [],
+      "warnings": [],
+      "organizer": "Heritage Walks Nepal",
+      "contact": "+977-1-4778901",
+      "userReviews": []
+    }
+  ],
+  "categories": [
+    { "id": "all", "name": "All Events", "icon": "🎉" },
+    { "id": "cultural", "name": "Cultural", "icon": "🏛️" },
+    { "id": "religious", "name": "Religious", "icon": "🙏" },
+    { "id": "adventure", "name": "Adventure", "icon": "🏔️" },
+    { "id": "nature", "name": "Nature", "icon": "🌄" },
+    { "id": "food", "name": "Food", "icon": "🍜" },
+    { "id": "spiritual", "name": "Spiritual", "icon": "🧘" },
+    { "id": "music", "name": "Music", "icon": "🎵" },
+    { "id": "sports", "name": "Sports", "icon": "🏃" },
+    { "id": "workshop", "name": "Workshop", "icon": "🎨" }
+  ],
+  "emergencyContacts": [
+    {
+      "service": "Police",
+      "number": "100",
+      "description": "Nepal Police Emergency"
+    },
+    {
+      "service": "Tourist Police",
+      "number": "1144",
+      "description": "Tourist Police Helpline"
+    },
+    {
+      "service": "Fire Brigade",
+      "number": "101",
+      "description": "Fire Emergency"
+    },
+    {
+      "service": "Ambulance",
+      "number": "102",
+      "description": "Medical Emergency"
+    },
+    {
+      "service": "Nepal Tourism Board",
+      "number": "+977-1-4256909",
+      "description": "Tourism Information & Help"
+    }
+  ]
+}
